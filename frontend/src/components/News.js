@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class News extends Component {
     render() {
         return (
-            <div class="container text-center">
+            <div className="container text-center">
                 <h3>News will show here</h3>
             </div>
         );
