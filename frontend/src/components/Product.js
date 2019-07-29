@@ -1,12 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Product = ({ img }) => (
-    <div className="card">
-        <img src={img} className="card-img-top" alt="..." />
-        <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+const Product = ({ product }) => (
+    <div className="card border-light flex-fill">
+        <Link to={`/products/${product.id}`}>
+            <img src={product.image} className="card-img-top" alt={product.title} />
+        </Link>
+        <div className="card-body" />
+        <div className="card-footer">
+            <Link to={`/products/${product.id}`}>
+                <h5 className="card-title">{product.title}</h5>
+            </Link>
         </div>
     </div>
 );

@@ -5,9 +5,9 @@ import "../App.css";
 
 const Navigation = () => (
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div className="navbar-nav">
           <NavLink activeClassName="nav-item active" to="/">
             Home
           </NavLink>

@@ -6,10 +6,10 @@ class UserNavigation extends Component {
             <div>
                 <ul className="navbar-nav mr-auto">
                     <li className="nav-item active">
-                        <a className="nav-link" href="/">Sign In<span className="sr-only">(current)</span></a>
+                        <a className="nav-link" href="/login">Sign In<span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/products">Register</a>
+                        <a className="nav-link" href="/register">Register</a>
                     </li>
                 </ul>
             </div>
