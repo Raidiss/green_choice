@@ -26,7 +26,7 @@ app.listen(PORT, function () {
   console.log("Server is running on Port: " + PORT);
 });
 
-mongoose.connect('mongodb://127.0.0.1:27017/greener', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://raidiss:xmmeG8UPxnanzuk3@cluster0-lf5s6.mongodb.net/greener?retryWrites=true&w=majority', { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', function () {
@@ -110,7 +110,7 @@ app.post("/products/add", (request, response) => {
 
 app.delete("/products/:id", (request, response) => {
   const { id } = request.params;
-  ProductData.deleteOne({ id: id }, (error) => {
+  ProductData.deleteOne({ _id: id }, (error) => {
     if (error) {
       response.status(400).send(error);
     } else {
