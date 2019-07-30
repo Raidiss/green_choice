@@ -4,12 +4,12 @@ class UserNavigation extends Component {
     render() {
         return (
             <div>
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Sign In<span class="sr-only">(current)</span></a>
+                <ul className="navbar-nav mr-auto">
+                    <li className="nav-item active">
+                        <a className="nav-link" href="/login">Sign In<span className="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/products">Register</a>
+                    <li className="nav-item">
+                        <a className="nav-link" href="/register">Register</a>
                     </li>
                 </ul>
             </div>
