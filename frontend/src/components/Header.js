@@ -5,10 +5,10 @@ import Search from './Search';
 class Header extends Component {
     render() {
         return (
-            <div>
-                <Navigation />
-                <Search />
-            </div>
+        <div className='header'>
+         <Navigation/>
+         <Search />
+        </div>
         );
     }
 }

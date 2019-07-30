@@ -1,28 +1,29 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
 import UserNavigation from './UserNavigation';
 import '../App.css';
+import HamburgerButton from './HamburgerButton/HamburgerButton';
+import NavItems from './NavItems/NavItems';
 
-const Navigation = () => (
-    <div class="navbar navbar-expand-lg">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <NavLink activeClassName="nav-active" to="/">Home</NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink activeClassName="nav-active" to="/products">Products</NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink activeClassName="nav-active" to="/news">News</NavLink>
-            </li>
-            <li class="nav-item">
-                <NavLink activeClassName="nav-active" to="/about">About</NavLink>
-            </li>
-        </ul>
-        <span class="navbar-text">
-            <UserNavigation />
-        </span>
-    </div>
-);
+class Navigation extends Component {
+    state={
+        show:false
+    }
+
+    handleClick = () => {
+        this.setState({show: !this.state.show})
+    }
+
+    render(){
+        const {show} = this.state
+        return(
+            <div className='navbar'>
+            <HamburgerButton onClick={this.handleClick}/>
+            <NavItems show={show}/>
+            </div>
+        )
+    }
+    }
+
 
 export default Navigation;
