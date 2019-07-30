@@ -25,4 +25,6 @@ Product.set('toJSON', {
   transform: function (doc, ret) {   delete ret._id  }
 });
 
+Product.index({title: 'text', description: 'text'});
+
 module.exports = mongoose.model('Product', Product);

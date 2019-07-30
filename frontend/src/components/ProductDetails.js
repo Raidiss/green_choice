@@ -29,15 +29,15 @@ class ProductDetails extends Component {
     render() {
         const { image, title, description, link } = this.state.product;
         return (
-            <div class="card mb-3">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src={image} class="card-img" alt="..." />
+            <div className="card mb-3">
+                <div className="row no-gutters">
+                    <div className="col-md-4">
+                        <img src={image} className="card-img" alt="..." />
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">{title}</h5>
-                            <p class="card-text">{description}</p>
+                    <div className="col-md-8">
+                        <div className="card-body">
+                            <h5 className="card-title">{title}</h5>
+                            <p className="card-text">{description}</p>
                         </div>
                         <div className="card-footer">
                             <a target="blank" className="btn btn-dark" href={link}>Go To Store</a>

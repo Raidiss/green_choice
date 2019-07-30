@@ -51,7 +51,7 @@ class Register extends Component {
                         <input type="checkbox" className="form-check-input" id="checkTerms"></input>
                         <label className="form-check-label" htmlFor="checkTerms">I agree to some extremely burdensome terms of service in which you may use my data for extremely invasive purposes of which I am completely unaware.</label>
                     </div>
-                    <button type="submit" className="btn btn-primary center-block">Submit</button>
+                    <button type="submit" className="btn btn-dark center-block">Submit</button>
                 </form>
             </div>
         );

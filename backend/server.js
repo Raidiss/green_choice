@@ -26,7 +26,7 @@ app.listen(PORT, function () {
   console.log("Server is running on Port: " + PORT);
 });
 
-mongoose.connect('mongodb+srv://raidiss:xmmeG8UPxnanzuk3@cluster0-lf5s6.mongodb.net/greener?retryWrites=true&w=majority', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://raidiss:xmmeG8UPxnanzuk3@cluster0-lf5s6.mongodb.net/greener?retryWrites=true&w=majority', { useNewUrlParser: true, useCreateIndex: true});
 const connection = mongoose.connection;
 
 connection.once('open', function () {
@@ -76,27 +76,6 @@ app.post('/register', (request, response) => {
     });
 });
 
-app.get("/products/:id", (request, response) => {
-  const { id } = request.params;
-  ProductData.findById(id, (error, product) => {
-    if (error) {
-      console.log(error);
-    } else {
-      response.json(product);
-    }
-  });
-});
-
-app.get("/products", (_, response) => {
-  ProductData.find((error, products) => {
-    if (error) {
-      console.log(error);
-    } else {
-      response.json(products);
-    }
-  });
-});
-
 app.post("/products/add", (request, response) => {
   const product = new ProductData(request.body);
   product.save()
@@ -108,6 +87,51 @@ app.post("/products/add", (request, response) => {
     });
 });
 
+app.get("/products/search", (request, response) => {
+  let query = {};
+  if (request.query.q) {
+    const searchString = request.query.q;
+    query = {$text: {$search: searchString}};
+  }
+  ProductData.find( query, (error, products) => {
+      if (error) {
+        console.log(error);
+      } else {
+        response.json(products);
+      }
+    });
+});
+
+app.get("/products/:id", (request, response, next) => {
+  const { id } = request.params;
+  if (!id) {
+    return next();
+  }
+  ProductData.findById(id, (error, product) => {
+    if (error) {
+      console.log(error);
+    } else {
+      response.json(product);
+    }
+  });
+});
+
+app.get("/products", (request, response) => {
+  let query = {};
+  if (request.query.tags) {
+    query = { tags: { $in: request.query.tags } };
+  }
+  ProductData.find(query, (error, products) => {
+    if (error) {
+      console.log(error);
+    } else {
+      response.json(products);
+    }
+  });
+});
+
+
+
 app.delete("/products/:id", (request, response) => {
   const { id } = request.params;
   ProductData.deleteOne({ _id: id }, (error) => {
@@ -117,4 +141,17 @@ app.delete("/products/:id", (request, response) => {
       response.status(200).send();
     }
   });
+});
+
+app.post("/products/add-many", (request, response) => {
+
+  const newProducts = request.body; // Validation
+
+  ProductData.insertMany(newProducts)
+    .then(products => {
+      response.send(products);
+    })
+    .catch(error => {
+      response.status(400).send(error);
+    });
 });

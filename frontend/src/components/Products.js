@@ -18,10 +18,14 @@ class Products extends Component {
           this.setState({ products: products })
         }
 
-        axios.get('/products')
+        let getUrl = '/products';
+        if (this.props.location && this.props.location.search) {
+            getUrl += this.props.location.search;
+        }
+        axios.get(getUrl)
             .then(response => {
                 this.setState({
-                    products: response.data.products
+                    products: response.data
                 })
             })
             .catch(() => {
@@ -41,7 +45,7 @@ class Products extends Component {
         return (
             <div className="container container-fluid">
                 <div className="row">
-                    <div class="card-group">
+                    <div className="card-group">
                         {this.state.products.map((item, index) => (
                             <div key={index} className="col-lg-4 col-md-6 col-sm-12 d-flex">
                                 <Product product={item} />
