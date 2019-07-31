@@ -26,7 +26,7 @@ app.listen(PORT, function () {
   console.log("Server is running on Port: " + PORT);
 });
 
-mongoose.connect('mongodb+srv://raidiss:xmmeG8UPxnanzuk3@cluster0-lf5s6.mongodb.net/greener?retryWrites=true&w=majority', { useNewUrlParser: true, useCreateIndex: true});
+mongoose.connect('mongodb+srv://raidiss:xmmeG8UPxnanzuk3@cluster0-lf5s6.mongodb.net/greener?retryWrites=true&w=majority', { useNewUrlParser: true, useCreateIndex: true });
 const connection = mongoose.connection;
 
 connection.once('open', function () {
@@ -87,20 +87,20 @@ app.post("/products/add", (request, response) => {
     });
 });
 
-app.get("/products/search", (request, response) => {
-  let query = {};
-  if (request.query.q) {
-    const searchString = request.query.q;
-    query = {$text: {$search: searchString}};
-  }
-  ProductData.find( query, (error, products) => {
-      if (error) {
-        console.log(error);
-      } else {
-        response.json(products);
-      }
-    });
-});
+// app.get("/products/search", (request, response) => {
+//   let query = {};
+//   if (request.query.q) {
+//     const searchString = request.query.q;
+//     query = { $text: { $search: searchString } };
+//   }
+//   ProductData.find(query, (error, products) => {
+//     if (error) {
+//       console.log(error);
+//     } else {
+//       response.json(products);
+//     }
+//   });
+// });
 
 app.get("/products/:id", (request, response, next) => {
   const { id } = request.params;
@@ -118,9 +118,14 @@ app.get("/products/:id", (request, response, next) => {
 
 app.get("/products", (request, response) => {
   let query = {};
-  if (request.query.tags) {
+
+  if (request.query.q) {
+    query = { $text: { $search: request.query.q } };
+
+  } else if (request.query.tags) {
     query = { tags: { $in: request.query.tags } };
   }
+
   ProductData.find(query, (error, products) => {
     if (error) {
       console.log(error);
@@ -129,8 +134,6 @@ app.get("/products", (request, response) => {
     }
   });
 });
-
-
 
 app.delete("/products/:id", (request, response) => {
   const { id } = request.params;

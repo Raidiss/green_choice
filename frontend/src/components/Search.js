@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 
 class Search extends Component {
     constructor(props) {
@@ -13,10 +12,8 @@ class Search extends Component {
     handleSearch = (e) => {
         e.preventDefault();
 
-        console.log(e.target.query.value);
         if (e.target.query.value) {
-            console.log(e.target.query.value);
-            this.props.history.push(`/products?q=${e.target.query.value}`)
+            this.props.onSearch(e.target.query.value)
         }
 
         // this.setState({

@@ -13,8 +13,7 @@ class News extends Component {
     }
 
     componentDidMount = () => {
-        axios.get(`https://newsapi.org/v2/everything?q=eco+friendly+greener&apiKey=09f11474837d46caa594a86c8a4264fc&pageSize=4
-             `)
+        axios.get(`https://newsapi.org/v2/everything?q=eco+friendly+greener&apiKey=09f11474837d46caa594a86c8a4264fc&pageSize=4`)
              .then(response => {
                 const data = response.data;
                 const articles = data.articles;
