@@ -48,7 +48,7 @@ class Products extends Component {
     }
 
     onProductsSearch = (searchTerm) => {
-        console.log(searchTerm);
+        this.props.history.push(`/products?q=${searchTerm}`);
         this.fetchProducts(`/products?q=${searchTerm}`);
     }
 
