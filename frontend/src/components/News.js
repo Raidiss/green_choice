@@ -13,12 +13,14 @@ class News extends Component {
     }
 
     componentDidMount = () => {
-        axios.get(`https://newsapi.org/v2/everything?q=eco+friendly+greener&apiKey=09f11474837d46caa594a86c8a4264fc&pageSize=4`)
+        axios.get(`https://newsapi.org/v2/everything?q=eco+friendly+free+plastic&apiKey=09f11474837d46caa594a86c8a4264fc&pageSize=4`)
              .then(response => {
-                const data = response.data;
-                const articles = data.articles;
-          
-                const list = articles.map((item, index) => {
+                 const data = response.data;
+                 const articles = data.articles;
+                 const filtered = articles.filter((a) => {
+                  return a.url && a.urlToImage;
+                });
+                const list = filtered.map((item, index) => {
                   return {
                     key: item.index,
                     source: item.source.name,
@@ -42,7 +44,6 @@ class News extends Component {
     render() {
         return (
           <div className="grid-container">
-            <h2> Newssss Component</h2>
             <div>
               <div className="row">
                 {this.state.list.map((item, index) => (
