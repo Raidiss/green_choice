@@ -66,8 +66,8 @@ app.post('/login',
 );
 
 app.post('/register', (request, response) => {
-  let user = new UserData(req.body);
-  user.save()
+  let user = new UserData(request.body);
+    user.save()
     .then(user => {
       response.status(200).json({ 'user': 'user added successfully' });
     })

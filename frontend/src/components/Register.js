@@ -7,8 +7,23 @@ class Register extends Component {
 
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            name: '',
+            lastname: ''
         }
+    }
+    handleNameChange = (e) => {
+        this.setState({
+            name: e.target.value
+        })
+
+    }
+
+    handleLastnameChange = (e) => {
+        this.setState({
+            lastname: e.target.value
+        })
+
     }
 
     handleEmailChange = (e) => {
@@ -27,7 +42,7 @@ class Register extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
 
-        axios.post('/users/add', { email: this.state.email, password: this.state.password })
+        axios.post('/register', { email: this.state.email, password: this.state.password, name: this.state.name, lastname: this.state.lastname })
             .then(response => {
                 console.log("This worked")
             })
@@ -36,8 +51,18 @@ class Register extends Component {
     render() {
         return (
             <div>
+                <h5>Welcome! We appreciate your interest in becoming one of our retail partners. We're excited to learn more about your business to see if we're a good fit and to assist you in selecting a great assortment of eco products by Green Choice!. Please fill out the form below to create a reseller account.
+                </h5>
                 <form onSubmit={this.handleSubmit}>
                     <div className="text-center">
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="nameInput">First name</label>
+                        <input type="text" className="form-control" id="nameInput" aria-describedby="nameHelp" placeholder="Enter first name" value={this.state.name} onChange={this.handleNameChange}></input>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="lastnameInput">Last name</label>
+                        <input type="text" className="form-control" id="lastnameInput" aria-describedby="lastnameHelp" placeholder="Enter last name" value={this.state.lastname} onChange={this.handleLastnameChange}></input>
                     </div>
                     <div className="form-group">
                         <label htmlFor="emailInput">Email address</label>
@@ -47,11 +72,7 @@ class Register extends Component {
                         <label htmlFor="passwordInput">Password</label>
                         <input type="password" className="form-control" id="passwordInput" placeholder="Password" onChange={this.handlePasswordChange}></input>
                     </div>
-                    <div className="form-group form-check">
-                        <input type="checkbox" className="form-check-input" id="checkTerms"></input>
-                        <label className="form-check-label" htmlFor="checkTerms">I agree to some extremely burdensome terms of service in which you may use my data for extremely invasive purposes of which I am completely unaware.</label>
-                    </div>
-                    <button type="submit" className="btn btn-dark center-block">Submit</button>
+                    <button type="submit" className="btn btn-dark center-block">Create</button>
                 </form>
             </div>
         );
