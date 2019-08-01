@@ -7,6 +7,7 @@ import About from './About';
 import ProductDetails from './ProductDetails';
 import SignIn from './SignIn';
 import Register from './Register';
+import Contact from './Contact';
 
 const Router = () => (
     <Switch>
@@ -17,6 +18,7 @@ const Router = () => (
         <Route path='/about' component={About} />
         <Route path='/login' component={SignIn} />
         <Route path='/register' component={Register} />
+        <Route path='contact' component={Contact} />
     </Switch>
 );
 

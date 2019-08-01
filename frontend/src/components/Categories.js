@@ -49,17 +49,38 @@ class Categories extends Component {
                     <div className="row">
                         <div className="card col-lg-4 col-md-6 col-sm-12 d-flex">
                             <Link to={'/products?tags[]=home&tags[]=kitchen'}>
-                                <img src='https://static.wixstatic.com/media/03c254_375e7382e890417f8f9aa89e60573805~mv2.png/v1/fill/w_368,h_368,al_c,q_80,usm_0.66_1.00_0.01/03c254_375e7382e890417f8f9aa89e60573805~mv2.webp' className="card-img-top" alt='...' />
+                                <img src='https://www.bing.com/th?id=OIP.k7ihhOMqew2rJzLVX_XeEQHaHa&pid=Api&rs=1' className="card-img-top" alt='...' />
+                                <h5>Home & Kitchen Products</h5>
                             </Link>
                         </div>
                         <div className="card col-lg-4 col-md-6 col-sm-12 d-flex">
                             <Link to={'/products?tags[]=baby&tags[]=kids'}>
-                                <img src='https://static.wixstatic.com/media/03c254_24b2e4f4fcb946c89dc305693539c082~mv2.png/v1/fill/w_368,h_368,al_c,q_80,usm_0.66_1.00_0.01/03c254_24b2e4f4fcb946c89dc305693539c082~mv2.webp' className="card-img-top" alt='...' />
+                                <img src='https://www.bing.com/th?id=OIP.-y62k5koPaR34Isqw2JvIAHaG7&pid=Api&rs=1' className="card-img-top" alt='...' />
+                                <h5>Baby & Kids Products</h5>
                             </Link>
                         </div>
                         <div className="card col-lg-4 col-md-6 col-sm-12 d-flex">
                             <Link to={'/products?tags[]=personal'}>
-                                <img src='https://static.wixstatic.com/media/03c254_7691565b07434aada68b2b8cecbe3384~mv2.png/v1/fill/w_368,h_368,al_c,q_80,usm_0.66_1.00_0.01/03c254_7691565b07434aada68b2b8cecbe3384~mv2.webp' className="card-img-top" alt='...' />
+                                <img src='https://images-na.ssl-images-amazon.com/images/I/71xEAkQ3GiL._SX522_.jpg' className="card-img-top" alt='...' />
+                                <h5>Personal Care</h5>
+                            </Link>
+                        </div>
+                        <div className="card col-lg-4 col-md-6 col-sm-12 d-flex">
+                            <Link to={'/products?tags[]=personal'}>
+                                <img src='https://cdn.cliqueinc.com/posts/238942/skincare-gift-sets-238942-1508169527384-product.600x0c.jpg' className="card-img-top" alt='...' />
+                                <h5>Beauty & Health </h5>
+                            </Link>
+                        </div>
+                        <div className="card col-lg-4 col-md-6 col-sm-12 d-flex">
+                            <Link to={'/products?tags[]=personal'}>
+                                <img src='http://www.2ndtake.co.za/wp-content/uploads/2012/05/green-clothing.jpg' className="card-img-top" alt='...' />
+                                <h5>Clothing & Shoes</h5>
+                            </Link>
+                        </div>
+                        <div className="card col-lg-4 col-md-6 col-sm-12 d-flex">
+                            <Link to={'/products?tags[]=personal'}>
+                                <img src='https://www.energystream-wavestone.com/wp-content/uploads/2015/01/%C2%A9-lapencia-Fotolia.com_ampoule.jpg' className="card-img-top" alt='...' />
+                                <h5>Eco Technology</h5>
                             </Link>
                         </div>
                     </div>

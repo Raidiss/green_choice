@@ -20,6 +20,9 @@ const Navigation = () => (
           <NavLink activeClassName="nav-item" to="/about">
             About
           </NavLink>
+          <NavLink activeClassName="nav-item" to="/contact">
+            Contact Us
+          </NavLink>
         </div>
       </div>
       <span className="navbar-text">

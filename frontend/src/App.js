@@ -13,6 +13,8 @@ class App extends React.Component {
         <BrowserRouter>
           <Header />
           <Router />
+          <br></br>
+          <br></br>
           <Footer />
         </BrowserRouter>
       </div>
