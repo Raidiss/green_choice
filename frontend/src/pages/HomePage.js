@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Jumbotron from '../components/jumbotron/Jumbotron'
+import Jumbotron from '../components/Jumbotron/Jumbotron'
 // import Search from '../components/search/Search'
 import Categories from '../components/categories/Categories'
 

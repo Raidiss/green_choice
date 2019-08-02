@@ -1,0 +1,7 @@
+.App {
+  text-align: center;
+}
+body {
+  background-color: #deebdd;
+  background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
+}

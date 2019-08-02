@@ -26,7 +26,9 @@ export default class Jumbotron extends Component {
             <a className="btn button" href="../products" role="button">Go Green</a>
             <div className="carousel-inner">
               <div className="carousel-item active">
+
                 <img src={ EarthFirst } className="d-block w-100" alt="..."/>
+
                 <div className="carousel-caption d-none d-md-block">
                   <h5>Green Choice</h5>
                   <p>Something persuasive about green choice.</p>
