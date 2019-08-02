@@ -1,0 +1,10 @@
+.search-bar {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.search-bar .form-control {
+  border-color: #aaa;
+  border-radius: 0;
+}

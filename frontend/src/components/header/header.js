@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Navigation from '../Navigation';
-import Jumbotron from '../Jumbotron/Jumbotron'
+
+import Navigation from './Navigation';
+
 class Header extends Component {
     render() {
         return (
-            <div>
+            <header>
                 <Navigation />
-                <Jumbotron />
-            </div>
+            </header>
         );
     }
 }

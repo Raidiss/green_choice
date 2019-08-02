@@ -1,0 +1,11 @@
+.navbar-light {
+  background-color: #fff !important;
+  box-shadow: 0 0px 15px #3333334d;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 1px;
+}

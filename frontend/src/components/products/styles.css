@@ -1,0 +1,24 @@
+.card.product {
+  margin-bottom: 35px;
+  border: none !important;
+  box-shadow: 0 0px 4px #00000029;
+  border-radius: 0;
+}
+
+.card.product .card-footer {
+  background-color: #fff;
+  border-top: none;
+}
+
+.card.product .card-footer .card-title {
+  color: #333;
+  font-size: 16px;
+  letter-spacing: 0px;
+  text-transform: none;
+}
+
+.card-footer{
+
+  background-color: rgb(255, 255, 255);
+
+}

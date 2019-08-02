@@ -1,0 +1,21 @@
+
+.card.category {
+  padding-bottom: 60px;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 30px;
+}
+
+.card.category .card-title {
+  position: absolute;
+  z-index: 1;
+  bottom: 15px;
+  color: #000;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+}
+
+.card.category:hover .card-title {
+  text-decoration: underline;
+}
