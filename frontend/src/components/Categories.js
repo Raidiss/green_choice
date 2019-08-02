@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Search from './Search';
+import Jumbotron from './Jumbotron/Jumbotron';
 
 
 class Categories extends Component {
@@ -41,6 +42,8 @@ class Categories extends Component {
     render() {
         return (
             <div>
+                <Jumbotron />
+            <div className="container">
                 <Search onSearch={this.onProductsSearch} />
                 <h3>Goods to help you live with less waste!!</h3>
                 <br></br>
@@ -86,6 +89,7 @@ class Categories extends Component {
                     </div>
                 </div>
             </div>
+        </div>
         );
     }
 }

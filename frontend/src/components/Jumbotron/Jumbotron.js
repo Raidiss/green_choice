@@ -13,7 +13,7 @@ import Mothernature from './Mothernature.png'
 export default class Jumbotron extends Component {
     render() {
       return (
-        <div className="bd-example">
+        <div className="bd-example ">
           <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
             <ol className="carousel-indicators">
               <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
@@ -23,7 +23,7 @@ export default class Jumbotron extends Component {
             <a className="btn button" href="#" role="button">Checkout Products</a>
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img src={ Art } className="d-block w-100" alt="..."/>
+                <img src={ Art } className="d-block w-100 art" alt="..."/>
                 <div className="carousel-caption d-none d-md-block">
                   <h5>Green Choice</h5>
                   <p>Something persuasive about green choice.</p>
