@@ -8,7 +8,7 @@ class SignIn extends Component {
         super(props);
 
         this.state = {
-            email: '',
+            username: '',
             password: '',
             redirectTo: null
         }
@@ -22,16 +22,15 @@ class SignIn extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        const { email, password } = this.state;
-
-        axios.post('/login', { email: email, password: password })
-            .then(response => {
-                if (response.status === 200) {
-                    // this.props.updateUser({
-                    //     loggedIn: true,
-                    //     email: response.data.email
-                    // })
-                    // update the state to redirect to home
+        const { onRefresh } = this.props;
+        const { username, password } = this.state;
+        axios.post('/login', { username: username, password: password })
+            .then(res => {
+                if (res.status === 200) {
+                    let user = res.data;
+                    delete user.password;
+                    sessionStorage.setItem('currentUser', JSON.stringify(user));
+                    onRefresh();
                     this.setState({
                         redirectTo: '/'
                     })
@@ -39,17 +38,18 @@ class SignIn extends Component {
             }).catch(error => {
                 console.log('login error: ')
                 console.log(error);
+                //TODO show some error message
             })
     }
 
     render() {
-        const { email, password, redirectTo } = this.state;
+        const { username, password, redirectTo } = this.state;
         if (this.state.redirectTo) {
             return <Redirect to={{ pathname: redirectTo }} />
         } else {
             return (
                 <div>
-                    <h4 className="header-login">Login</h4>
+                    <h4 className="form-header">Login</h4>
                     <form className="form-horizontal">
                         <div className="form-group">
                             <div className="col-1 col-ml-auto">
@@ -58,10 +58,10 @@ class SignIn extends Component {
                             <div className="col-3 col-mr-auto">
                                 <input className="form-input"
                                     type="text"
-                                    id="email"
-                                    name="email"
+                                    id="username"
+                                    name="username"
                                     placeholder="Email"
-                                    value={email}
+                                    value={username}
                                     onChange={this.handleChange}
                                 />
                             </div>
@@ -86,7 +86,7 @@ class SignIn extends Component {
                                 className="btn btn-dark col-1 col-mr-auto"
 
                                 onClick={this.handleSubmit}
-                                type="submit">Sing In</button>
+                                type="submit">Sign In</button>
                         </div>
                     </form>
                 </div>

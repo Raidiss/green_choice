@@ -1,14 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Navigation from './Navigation';
 
-class Header extends Component {
-    render() {
-        return (
-            <header>
-                <Navigation />
-            </header>
-        );
-    }
-}
+const header = ({ user }) => (
+    <header>
+        <Navigation user={user} />
+    </header>
+);
 
-export default Header;
+export default header;

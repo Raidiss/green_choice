@@ -8,6 +8,8 @@ const LocalStrategy = require('passport-local').Strategy;
 const UserData = require('./data/user.model');
 const ProductData = require('./data/product.model');
 
+require('dotenv').config();
+
 const PORT = 4000;
 
 const app = express();
@@ -26,7 +28,8 @@ app.listen(PORT, function () {
   console.log("Server is running on Port: " + PORT);
 });
 
-mongoose.connect('mongodb+srv://raidiss:xmmeG8UPxnanzuk3@cluster0-lf5s6.mongodb.net/greener?retryWrites=true&w=majority', { useNewUrlParser: true, useCreateIndex: true });
+const CON_STR = process.env.MONGO_DB_CON_STR;
+mongoose.connect(CON_STR, { useNewUrlParser: true, useCreateIndex: true });
 const connection = mongoose.connection;
 
 connection.once('open', function () {
@@ -34,13 +37,13 @@ connection.once('open', function () {
 })
 
 passport.use(new LocalStrategy(
-  function (username, password, done) {
-    UserData.findOne({ username: username }, function (err, user) {
+  (username, password, done) => {
+    UserData.findOne({ username: username }, (err, user) => {
       if (err) { return done(err); }
       if (!user) {
         return done(null, false, { message: 'Incorrect username.' });
       }
-      if (!user.validPassword(password)) {
+      if (!user.checkPassword(password)) {
         return done(null, false, { message: 'Incorrect password.' });
       }
       return done(null, user);
@@ -59,20 +62,30 @@ passport.deserializeUser(function (id, done) {
 });
 
 app.post('/login',
-  passport.authenticate('local', {
-    successRedirect: '/',
-    failureRedirect: '/'
-  })
-);
+  passport.authenticate('local'), (req, res) => {
+    res.send(req.user);
+  });
 
-app.post('/register', (request, response) => {
-  let user = new UserData(request.body);
-    user.save()
+app.get('/logout', function (req, res) {
+  req.logout();
+  res.status(200).send();
+});
+
+app.post('/register', (req, res) => {
+  let user = new UserData(req.body);
+  user.save()
     .then(user => {
-      response.status(200).json({ 'user': 'user added successfully' });
+      req.login(user, err => {
+        if (err) {
+          res.status(401).send('failed during sign in');
+        } else {
+          res.send(user);
+        }
+      })
     })
     .catch(err => {
-      response.status(400).send('adding new user failed');
+      console.log(err);
+      res.status(400).send('adding new user failed');
     });
 });
 
@@ -86,21 +99,6 @@ app.post("/products/add", (request, response) => {
       response.status(400).send(error);
     });
 });
-
-// app.get("/products/search", (request, response) => {
-//   let query = {};
-//   if (request.query.q) {
-//     const searchString = request.query.q;
-//     query = { $text: { $search: searchString } };
-//   }
-//   ProductData.find(query, (error, products) => {
-//     if (error) {
-//       console.log(error);
-//     } else {
-//       response.json(products);
-//     }
-//   });
-// });
 
 app.get("/products/:id", (request, response, next) => {
   const { id } = request.params;
@@ -147,7 +145,6 @@ app.delete("/products/:id", (request, response) => {
 });
 
 app.post("/products/add-many", (request, response) => {
-
   const newProducts = request.body; // Validation
 
   ProductData.insertMany(newProducts)

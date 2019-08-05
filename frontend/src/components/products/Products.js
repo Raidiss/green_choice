@@ -23,10 +23,9 @@ class Products extends Component {
         }
 
         let getUrl = '/products';
-        if (this.props.location && this.props.location.search) {
-            getUrl += this.props.location.search;
+        if (this.props.history && this.props.history.location && this.props.history.location.search) {
+            getUrl += this.props.history.location.search;
         }
-        // console.log(getUrl);
         this.fetchProducts(getUrl);
     }
 
@@ -38,7 +37,7 @@ class Products extends Component {
             })
         })
         .catch(() => {
-
+            //TODO show some error 
         })
         .finally(() => {
             console.log(this.state.products);

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 
 import Search from '../search/Search';
 
@@ -13,27 +12,6 @@ class Categories extends Component {
         this.state = {
             products: []
         }
-    }
-
-    componentDidMount = () => {
-        const json = sessionStorage.getItem("products");
-        const products = JSON.parse(json);
-        if (products) {
-            this.setState({ products: products })
-        }
-
-        axios.get('/products')
-            .then(response => {
-                this.setState({
-                    products: response.data
-                })
-            })
-            .catch(() => {
-
-            })
-            .finally(() => {
-                console.log(this.state.products);
-            })
     }
 
     onProductsSearch = (searchTerm) => {

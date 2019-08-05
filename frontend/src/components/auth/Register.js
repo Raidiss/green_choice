@@ -6,31 +6,29 @@ class Register extends Component {
         super(props);
 
         this.state = {
-            email: '',
+            username: '',
             password: '',
             name: '',
             lastname: ''
         }
     }
+
     handleNameChange = (e) => {
         this.setState({
             name: e.target.value
         })
-
     }
 
     handleLastnameChange = (e) => {
         this.setState({
             lastname: e.target.value
         })
-
     }
 
     handleEmailChange = (e) => {
         this.setState({
-            email: e.target.value
+            username: e.target.value
         })
-
     }
 
     handlePasswordChange = (e) => {
@@ -41,10 +39,21 @@ class Register extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-
-        axios.post('/register', { email: this.state.email, password: this.state.password, name: this.state.name, lastname: this.state.lastname })
-            .then(response => {
-                console.log("This worked")
+        const { onRefresh } = this.props;
+        axios.post('/register', { username: this.state.username, password: this.state.password, name: this.state.name, lastname: this.state.lastname })
+            .then(res => {
+                if (res.status === 200) {
+                    let user = res.data;
+                    delete user.password;
+                    sessionStorage.setItem('currentUser', JSON.stringify(user));
+                    onRefresh();
+                    this.setState({
+                        redirectTo: '/'
+                    })
+                }
+            })
+            .catch(err => {
+                console.log(err);
             })
     }
 
@@ -66,7 +75,7 @@ class Register extends Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="emailInput">Email address</label>
-                        <input type="email" className="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email" value={this.state.email} onChange={this.handleEmailChange}></input>
+                        <input type="email" className="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter email" value={this.state.username} onChange={this.handleEmailChange}></input>
                     </div>
                     <div className="form-group">
                         <label htmlFor="passwordInput">Password</label>
