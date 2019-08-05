@@ -9,7 +9,7 @@ import './styles.css';
 const Navigation = ({user}) => (
   <nav className="navbar navbar-expand-lg navbar-light">
     <NavLink className="navbar-brand" activeClassName="active" to="/">
-      <img style={{ width: 60 }} src={Logo} alt="Logo" />
+      <img style={{ width: 120, marginBottom: -10 }} src={Logo} alt="Logo" />
     </NavLink>
 
     <button className="navbar-toggler order-2" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
