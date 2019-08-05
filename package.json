@@ -6,7 +6,6 @@
   "scripts": {
     "start": "NODE_ENV=production PORT=$PORT node index.js",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
-
   },
   "repository": {
     "type": "git",
@@ -20,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Raidiss/green_choice/issues"
   },
-  "homepage": "https://github.com/Raidiss/green_choice#readme"
+  "homepage": "https://github.com/Raidiss/green_choice#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
