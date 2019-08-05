@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Milly from './milly.png';
+import Raidis from './ChaconRaidis.jpg';
+import Jumbotron from '../Jumbotron/Jumbotron';
 
 
 
@@ -8,17 +10,15 @@ class About extends Component {
         return (
             <div className="container text-center">
 
-                <h3>About Us</h3>
-
-                <div class="media">
-                <img src={ Milly } class="mr-3" alt="..." height="100px"></img>
-                    <div class="media-body">
-                        <h5 class="mt-0">Media heading</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                <h3>Our mission </h3>
+                <p>Many of the products we buy and consume are harming the plant. So we strive to educate people and make the "going green" process as simple and effortless as possible. However, we do emphasize how important this is and how we want you to become a part of the solution that will take care of this planet for all those here, and for those who we're handing it off to. </p>
+                <hr />
+                <img src={ Raidis } class="raidis" alt="..." height="200rem"></img>
+                <img src={ Milly } class="milly" alt="..." height="200rem"></img>
+                
+                        <h5 class="mt-0">Green choice creators</h5>
+                        We are two wyncode students who are trying to help the planet and help people live a sustainable lifestyle. We support your green decisions!
                     </div>
-                </div>
-
-            </div>
         );
     }
 }

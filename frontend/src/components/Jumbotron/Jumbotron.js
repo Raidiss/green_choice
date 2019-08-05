@@ -5,8 +5,8 @@ import 'bootstrap/dist/js/bootstrap.js';
 
 import './styles.css';
 
-import EarthFirst from './art-close-up.jpg';
-import Bonding from './bonding.jpg';
+import friends from './friends.jpg';
+import earth from './earth.jpg';
 import Mothernature from './Mothernature.png'
 // import { connect } from "react-redux";
 // import { bindActionCreators } from "redux";
@@ -27,15 +27,15 @@ export default class Jumbotron extends Component {
             <div className="carousel-inner">
               <div className="carousel-item active">
 
-                <img src={ EarthFirst } className="d-block w-100" alt="..."/>
+                <img src={ friends } className="d-block w-100" alt="..."/>
 
                 <div className="carousel-caption d-none d-md-block">
                   <h5>Green Choice</h5>
-                  <p>Something persuasive about green choice.</p>
+                  <p>Be kind to our Earth</p>
                 </div>
               </div>
               <div className="carousel-item">
-                <img src={ Bonding } className="d-block w-100" alt="..."/>
+                <img src={ earth } className="d-block w-100" alt="..."/>
                 <div className="carousel-caption d-none d-md-block">
                   <h5>We are in this together</h5>
                   <p></p>
@@ -45,7 +45,7 @@ export default class Jumbotron extends Component {
                 <img src={ Mothernature } className="d-block w-100" alt="..."/>
                 <div className="carousel-caption d-none d-md-block">
                   <h5>Be the change you want to see</h5>
-                  <p>The world is lead by your example not by your opinion.</p>
+                  <p>It's just one plastic straw said 7.6 billion people.</p>
                 </div>
               </div>
             </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import UserNavigation from "./UserNavigation";
 
-import Logo from './logo.jpg'
+import Logo from './logo.png'
 
 import './styles.css';
 

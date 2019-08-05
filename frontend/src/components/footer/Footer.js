@@ -4,40 +4,40 @@ import './styles.css';
 const Footer = () => (
 
         <div>
-        <footer class="page-footer font-small blue pt-4">
+        <footer className="page-footer font-small blue pt-4">
 
             
-<div class="container-fluid text-center text-md-left">
+<div className="container-fluid text-center text-md-left">
 
     
-    <div class="row">
+    <div className="row">
 
     
-    <div class="col-md-6 mt-md-0 mt-3">
+    <div className="col-md-6 mt-md-0 mt-3">
 
 
-        <h5 class="text-uppercase">Footer Content</h5>
-        <p>Here you can use rows and columns to organize your footer content.</p>
+        <h5 className="text-uppercase">Lets get in contact!</h5>
+        <p>Here's where you can reach us on social media, and professional platforms <br /> please feel free to to checkout our work or network with us.</p>
 
     </div>
     
 
-    <hr class="clearfix w-100 d-md-none pb-3"/>
+    <hr className="clearfix w-100 d-md-none pb-3"/>
 
     
-    <div class="col-md-3 mb-md-0 mb-3">
+    <div className="col-md-3 mb-md-0 mb-3">
 
-        <h5 class="text-uppercase">Links</h5>
+        <h5 className="text-uppercase">Raidis C</h5>
 
-        <ul class="list-unstyled">
+        <ul className="list-unstyled">
         <li>
-            <a href="#!"><img src="https://img.icons8.com/material-outlined/50/000000/github.png" alt="social-media"/></a>
+            <a href="https://github.com/Raidiss"><img src="https://img.icons8.com/material-outlined/50/000000/github.png" alt="social-media"/></a>
         </li>
         <li>
-            <a href="#!"><img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="social-media"/></a>
+            <a href="https://www.linkedin.com/in/raidis-chacon-4b9344182/"><img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="social-media"/></a>
         </li>
         <li>
-            <a href="#!"><img src="https://img.icons8.com/ios-filled/80/000000/twitter.png" alt="social-media"/></a>
+            <a href="https://twitter.com/Raidisss"><img src="https://img.icons8.com/ios-filled/50/000000/twitter.png" alt="social-media"/></a>
         </li>
         </ul>
 
@@ -45,19 +45,19 @@ const Footer = () => (
     
 
     
-    <div class="col-md-3 mb-md-0 mb-3">
+    <div className="col-md-3 mb-md-0 mb-3">
 
-        <h5 class="text-uppercase">Links</h5>
+        <h5 className="text-uppercase">Milagro G</h5>
 
-            <ul class="list-unstyled">
+            <ul className="list-unstyled">
                 <li>
-                    <a href="#!"><img src="https://img.icons8.com/material-outlined/50/000000/github.png" alt="social-media"/></a>
+                    <a href="https://github.com/milagro-g"><img src="https://img.icons8.com/material-outlined/50/000000/github.png" alt="social-media"/></a>
                 </li>
                 <li>
-                    <a href="#!"><img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="social-media"/></a>
+                    <a href="https://www.linkedin.com/in/milagro-gonzalez/"><img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="social-media"/></a>
                 </li>
                 <li>
-                    <a href="#!"><img src="https://img.icons8.com/ios-filled/80/000000/twitter.png" alt="social-media"/></a>
+                    <a href="https://twitter.com/MillyInTech"><img src="https://img.icons8.com/ios-filled/50/000000/twitter.png" alt="social-media"/></a>
                 </li>
             </ul>
 
@@ -69,13 +69,6 @@ const Footer = () => (
 
 </div>
  
-
-
-<div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-</div>
-
-
 </footer>
         </div>
 
