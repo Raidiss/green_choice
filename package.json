@@ -1,0 +1,26 @@
+{
+  "name": "green_choice",
+  "version": "1.0.0",
+  "description": "..",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production PORT=$PORT node index.js",
+    "heroku-postbuild": "cd frontend && npm install && npm run build && cd ../backend && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raidiss/green_choice.git"
+  },
+  "engines": {
+    "node": "10.15.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raidiss/green_choice/issues"
+  },
+  "homepage": "https://github.com/Raidiss/green_choice#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
