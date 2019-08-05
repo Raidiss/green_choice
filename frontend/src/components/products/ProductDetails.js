@@ -19,11 +19,8 @@ class ProductDetails extends Component {
                 })
             })
             .catch(() => {
-
-            })
-            .finally(() => {
-                console.log(this.state.product);
-            })
+                //TODO show some error message
+            });
     }
 
     render() {

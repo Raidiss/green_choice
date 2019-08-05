@@ -23,12 +23,10 @@ export default class Jumbotron extends Component {
               <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
               <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
             </ol> 
-            <a className="btn button" href="../products" role="button">Go Green</a>
             <div className="carousel-inner">
               <div className="carousel-item active">
 
                 <img src={ friends } className="d-block w-100" alt="..."/>
-
                 <div className="carousel-caption d-none d-md-block">
                   <h5>Green Choice</h5>
                   <p>Be kind to our Earth</p>
@@ -38,7 +36,7 @@ export default class Jumbotron extends Component {
                 <img src={ earth } className="d-block w-100" alt="..."/>
                 <div className="carousel-caption d-none d-md-block">
                   <h5>We are in this together</h5>
-                  <p></p>
+                  <p>&nbsp;</p>
                 </div>
               </div>
               <div className="carousel-item">

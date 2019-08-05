@@ -2,9 +2,9 @@ import React from 'react';
 
 import Login from '../components/auth/Login'
 
-const LoginPage = () => (
+const LoginPage = ({ onRefresh }) => (
   <div className="page container">
-    <Login />
+    <Login onRefresh={onRefresh} />
   </div>
 );
 

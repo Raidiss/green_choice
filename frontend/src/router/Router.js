@@ -10,17 +10,19 @@ import AboutPage from '../pages/AboutPage';
 import ContactPage from '../pages/ContactPage';
 import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
+import AddProductPage from '../pages/AddProductPage';
 
-const Router = () => (
+const Router = ({ refreshSession }) => (
     <Switch>
         <Route exact path='/' component={HomePage} />
+        <Route path='/products/add' component={AddProductPage} />
         <Route path='/products/:id' component={ProductDetails} />
         <Route path='/products' component={ProductsPage} />
         <Route path='/news' component={NewsPage} />
         <Route path='/about' component={AboutPage} />
         <Route path='/contact' component={ContactPage} />
-        <Route path='/login' component={LoginPage} />
-        <Route path='/register' component={RegisterPage} />
+        <Route path='/login' render={props => <LoginPage {...props} onRefresh={refreshSession} />} />
+        <Route path='/register' render={props => <RegisterPage {...props} onRefresh={refreshSession} />} />
     </Switch>
 );
 
