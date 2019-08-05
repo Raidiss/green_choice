@@ -47,7 +47,7 @@ class News extends Component {
   render() {
     return (
       <div className="grid-container">
-        <h2 className="text-center">Lastest News</h2>
+        <h2 className="text-center">Latest News</h2>
         <div className="row">
           {this.state.list.map((item, index) => (
             <div key={index} className="col-lg-6 col-md-12">

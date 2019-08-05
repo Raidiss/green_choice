@@ -44,7 +44,7 @@ class SignIn extends Component {
 
     render() {
         const { username, password, redirectTo } = this.state;
-        if (this.state.redirectTo) {
+        if (redirectTo) {
             return <Redirect to={{ pathname: redirectTo }} />
         } else {
             return (
