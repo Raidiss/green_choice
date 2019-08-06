@@ -61,7 +61,7 @@ class AddProduct extends Component {
     render() {
         const { title, image, link, message, messageClass, description, tags } = this.state;
         return (
-            <div>
+            <div className="form-container">
                 <h4 className="form-header">Add Green Product</h4>
                 <span className={messageClass} id="messageLabel">{message}</span>
                 <br />

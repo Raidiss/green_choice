@@ -47,6 +47,11 @@ h2 {
   border-color: #27883e;
 }
 
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .form-control {
   border-radius: 0;
 }

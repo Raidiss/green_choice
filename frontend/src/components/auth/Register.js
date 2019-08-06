@@ -65,9 +65,10 @@ class Register extends Component {
             return <Redirect to={{ pathname: redirectTo }} />
         } else {
             return (
-                <div>
-                    <h5>Welcome! We appreciate your interest in becoming one of our retail partners. We're excited to learn more about your business to see if we're a good fit and to assist you in selecting a great assortment of eco products by Green Choice!. Please fill out the form below to create a reseller account.
-                </h5>
+                <div className="form-container">
+                    <h5>Welcome! </h5>
+                    <h6> We appreciate your interest in becoming one of our retail partners. We're excited to learn more about your business!
+                        Please fill out the form below to create a reseller account.</h6>
                     <form onSubmit={this.handleSubmit}>
                         <div className="text-center">
                         </div>

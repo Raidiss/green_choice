@@ -8,17 +8,6 @@ import Raidis from './ChaconRaidis.jpg';
 class About extends Component {
     render() {
         return (
-            // <div className="container text-center">
-
-            //     <h3>Our mission </h3>
-            //     <p>Many of the products we buy and consume are harming the plant. So we strive to educate people and make the "going green" process as simple and effortless as possible. However, we do emphasize how important this is and how we want you to become a part of the solution that will take care of this planet for all those here, and for those who we're handing it off to. </p>
-            //     <hr />
-            //     <img src={ Raidis } className="raidis" alt="..." height="200rem"></img>
-            //     <img src={ Milly } className="milly" alt="..." height="200rem"></img>
-                
-            //             <h5 className="mt-0">Green choice creators</h5>
-            //             We are two wyncode students who are trying to help the planet and help people live a sustainable lifestyle. We support your green decisions!
-            //         </div>
                 <div>
                 <div className="container">
                     <div class="row">
@@ -57,8 +46,9 @@ class About extends Component {
                     <img src={ Milly } className="milly" alt="..." height="350rem"></img>   
                 </div>
                     <div className="col-sm">
-                    <h5 className="mt-0">Green choice creators</h5>
+                    <h3 className="mt-0">Green choice creators</h3>
                     <p> We are two wyncode students who are trying to help the planet and help people live a sustainable lifestyle. We support your green decisions!</p>
+                    <img src="https://cdn.pixabay.com/photo/2018/12/09/17/47/trash-3865352_1280.jpg" className="raidis" alt="..." height="250rem"></img>
                     </div>
                 </div>
                 </div>

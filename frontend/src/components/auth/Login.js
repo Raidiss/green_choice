@@ -48,15 +48,12 @@ class SignIn extends Component {
             return <Redirect to={{ pathname: redirectTo }} />
         } else {
             return (
-                <div>
+                <div className="form-container">
                     <h4 className="form-header">Login</h4>
                     <form className="form-horizontal">
                         <div className="form-group">
-                            <div className="col-1 col-ml-auto">
                                 <label className="form-label" htmlFor="username">Username</label>
-                            </div>
-                            <div className="col-3 col-mr-auto">
-                                <input className="form-input"
+                                <input className="form-control"
                                     type="text"
                                     id="username"
                                     name="username"
@@ -64,27 +61,20 @@ class SignIn extends Component {
                                     value={username}
                                     onChange={this.handleChange}
                                 />
-                            </div>
                         </div>
                         <div className="form-group">
-                            <div className="col-1 col-ml-auto">
                                 <label className="form-label" htmlFor="password">Password: </label>
-                            </div>
-                            <div className="col-3 col-mr-auto">
-                                <input className="form-input"
+                                <input className="form-control"
                                     placeholder="password"
                                     type="password"
                                     name="password"
                                     value={password}
                                     onChange={this.handleChange}
                                 />
-                            </div>
                         </div>
-                        <div className="form-group ">
-                            <div className="col-7"></div>
+                        <div className="form-group">
                             <button
-                                className="btn btn-dark col-1 col-mr-auto"
-
+                                className="btn btn-dark"
                                 onClick={this.handleSubmit}
                                 type="submit">Sign In</button>
                         </div>
