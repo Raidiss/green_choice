@@ -30,16 +30,16 @@ const Footer = () => (
         <h5 className="text-uppercase">Raidis C</h5>
 
         <ul className="list-unstyled">
-        <li>
-            <a href="https://github.com/Raidiss"><img src="https://img.icons8.com/material-outlined/50/000000/github.png" alt="social-media"/></a>
-        </li>
-        <li>
-            <a href="https://www.linkedin.com/in/raidis-chacon-4b9344182/"><img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="social-media"/></a>
-        </li>
-        <li>
-            <a href="https://twitter.com/Raidisss"><img src="https://img.icons8.com/ios-filled/50/000000/twitter.png" alt="social-media"/></a>
-        </li>
-        </ul>
+       <li>
+           <a href="https://github.com/Raidiss"><img src="https://img.icons8.com/ios-filled/32/000000/github.png" alt="github"/></a>
+       </li>
+       <li>
+           <a href="https://www.linkedin.com/in/raidis-chacon-4b9344182/"><img src="https://img.icons8.com/metro/26/000000/linkedin.png"  alt="linkedin"/></a>
+       </li>
+       <li>
+           <a href="https://twitter.com/Raidisss"><img src="https://img.icons8.com/ios-glyphs/30/000000/twitter.png" alt="witter"/></a>
+       </li>
+       </ul>
 
     </div>
     
@@ -49,17 +49,17 @@ const Footer = () => (
 
         <h5 className="text-uppercase">Milagro G</h5>
 
-            <ul className="list-unstyled">
-                <li>
-                    <a href="https://github.com/milagro-g"><img src="https://img.icons8.com/material-outlined/50/000000/github.png" alt="social-media"/></a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/milagro-gonzalez/"><img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="social-media"/></a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/MillyInTech"><img src="https://img.icons8.com/ios-filled/50/000000/twitter.png" alt="social-media"/></a>
-                </li>
-            </ul>
+        <ul className="list-unstyled">
+               <li>
+                   <a href="https://github.com/milagro-g"><img src="https://img.icons8.com/ios-filled/32/000000/github.png" alt="github"/></a>
+               </li>
+               <li>
+                   <a href="https://www.linkedin.com/in/milagro-gonzalez/"><img src="https://img.icons8.com/metro/26/000000/linkedin.png" alt="linkedin"/></a>
+               </li>
+               <li>
+                   <a href="https://twitter.com/MillyInTech"><img src="https://img.icons8.com/ios-glyphs/30/000000/twitter.png" alt="twitter"/></a>
+               </li>
+           </ul>
 
     </div>
     
