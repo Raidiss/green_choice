@@ -2,14 +2,14 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import UserNavigation from "./UserNavigation";
 
-import Logo from './logo.jpg'
+import Logo from './logo.png'
 
 import './styles.css';
 
 const Navigation = ({user}) => (
   <nav className="navbar navbar-expand-lg navbar-light">
     <NavLink className="navbar-brand" activeClassName="active" to="/">
-      <img style={{ width: 120, marginBottom: -10 }} src={Logo} alt="Logo" />
+      <img style={{ width: 148, marginTop: -10, marginBottom: -10, marginRight:-10 }} src={Logo} alt="Logo" />
     </NavLink>
 
     <button className="navbar-toggler order-2" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">

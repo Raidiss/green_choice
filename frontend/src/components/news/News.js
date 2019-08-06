@@ -15,7 +15,7 @@ class News extends Component {
   }
 
   componentDidMount = () => {
-    axios.get(`https://newsapi.org/v2/everything?q=eco+friendly+free+plastic&apiKey=${API_KEY}&pageSize=6`)
+    axios.get(`https://newsapi.org/v2/everything?q=eco+friendly+free+plastic&apiKey=${API_KEY}&pageSize=4`)
       .then(response => {
         const data = response.data;
         const articles = data.articles;
