@@ -7,7 +7,7 @@ import ProductsPage from '../pages/ProductsPage';
 import ProductDetails from '../pages/ProductDetailsPage';
 import NewsPage from '../pages/NewsPage';
 import AboutPage from '../pages/AboutPage';
-import ContactPage from '../pages/ContactPage';
+import StatsPage from '../pages/StatsPage';
 import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
 import AddProductPage from '../pages/AddProductPage';
@@ -20,7 +20,7 @@ const Router = ({ refreshSession }) => (
         <Route path='/products' component={ProductsPage} />
         <Route path='/news' component={NewsPage} />
         <Route path='/about' component={AboutPage} />
-        <Route path='/contact' component={ContactPage} />
+        <Route path='/stats' component={StatsPage} />
         <Route path='/login' render={props => <LoginPage {...props} onRefresh={refreshSession} />} />
         <Route path='/register' render={props => <RegisterPage {...props} onRefresh={refreshSession} />} />
     </Switch>

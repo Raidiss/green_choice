@@ -32,7 +32,7 @@ class About extends Component {
                         <h3>WHY IT MATTERS</h3>
                         <p>Plastic pollution is destroying our oceans and harming the animals who call them home; the food, beauty, and fashion industries contribute to the cruel and needless deaths of billions of animals annually; animal agriculture is rapidly destroying habitats across the globe and is a leading cause of greenhouse gases; and more people than ever suffer from health problems.</p>
                         <p>But all is not lost. Every one of us can make a real difference, simply by making lifestyle changes.</p>
-                        <p>Every person following sustainable lifestyle saves 365 animals, prevents the destruction of 10,950 sq. ft. of forest, and reduces CO2 emissions by 7,300 lbs., annually. Plus, you make the world a happier and healthier place for all beings.</p>
+                        <p>Every person following sustainable lifestyle saves 365 animals, prevents the destruction of 10,950 sq. ft. of forest, and reduces CO2 emissions by 7,300 lbs., annually. Plus, you make the world a happier and healthier place for all beings.</p>                
                         </div>
                     </div>
                 </div>

@@ -34,8 +34,8 @@ const Navigation = ({user}) => (
               </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" activeClassName="active" to="/contact">
-            Contact Us
+          <NavLink className="nav-link" activeClassName="active" to="/stats">
+            Stats
               </NavLink>
         </li>
       </ul>
