@@ -17,7 +17,7 @@ const Footer = () => (
 
 
         <h5 className="text-uppercase">Lets get in contact!</h5>
-        <p>Here's where you can reach us on social media, and professional platforms <br /> please feel free to to checkout our work or network with us.</p>
+        <p>Here's where you can reach us on social media, and professional platforms <br /> please feel free to checkout our work or network with us.</p>
 
     </div>
     
